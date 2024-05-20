@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: chatbox-simple
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: API_KEY
+        value: AIzaSyCxMZperp0roESnMtpz4_v6grj-u8NBlwo
+
+

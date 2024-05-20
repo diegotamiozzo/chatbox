@@ -1,0 +1,150 @@
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    background-color: rgb(226, 233, 231); /* cinza de fundo */
+    overflow-x: hidden;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+    color: black; /* Preto para o texto */
+    padding: 5px; /* Adiciona padding para o conteúdo */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* Estilos do contêiner de chat */
+#chat-container {
+    width: 400px;
+    max-width: 100%;
+    background-color: #f1f0f5; /* Branco para o fundo do chat */
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 5px 0;
+    border: 2px solid  black; /* Adiciona borda preta */
+    box-shadow: 0 4px 10px rgba(2, 0, 0, 1); /* Aumenta a sombra */
+}
+
+#chat-box {
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.user-message {
+    background-color: #a4dbeb; /* Azul claro para mensagens do usuário */
+    color: black; /* Azul escuro para o texto */
+    border: 2px solid  black; /* Adiciona borda preta */
+    box-shadow: 0 4px 10px rgba(2, 0, 0, 1); /* Aumenta a sombra */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-align: right;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.bot-message {
+    background-color: #f1f0f5; /* Branco para mensagens do bot */
+    color: #222; /* Azul escuro para o texto */
+    border: 2px solid  black; /* Adiciona borda preta */
+    box-shadow: 0 4px 10px rgba(2, 0, 0, 1); /* Aumenta a sombra */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#user-input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc; /* Cinza claro para a borda */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#send-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff; /* Azul padrão para o botão */
+    color: #fff; /* Branco para o texto */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#send-button:hover {
+    background-color: #06376b; /* Azul mais escuro para hover */
+    color: #fff; /* Branco para o texto */
+    transform: translateY(-2px); /* Eleva o botão */
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+#copy-button, #clear-button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #007bff; /* Azul padrão para o botão */
+    color: #fff; /* Branco para o texto */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#copy-button:hover, #clear-button:hover {
+    background-color: #09478a; /* Azul mais escuro para hover */
+    color: #fff; /* Branco para o texto */
+    transform: translateY(-2px); /* Eleva o botão */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+/* Estilos do rodapé */
+footer {
+    color: black; /* Preto para o texto */
+    padding: 5px; /* Adiciona padding para o conteúdo */
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #chat-container {
+        width: 90%;
+    }
+}
